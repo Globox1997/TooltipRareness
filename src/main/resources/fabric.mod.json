@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "tooltiprareness",
+  "version": "1.0.0",
+  "name": "Tooltip Rareness",
+  "description": "Shows item rareness",
+  "authors": [
+    "Globox_Z"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/tooltiprareness",
+    "sources": "https://github.com/Globox1997/TooltipRareness",
+    "issues": "https://github.com/Globox1997/TooltipRareness/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/tooltiprareness/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": []
+  },
+  "mixins": [
+    "tooltiprareness.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

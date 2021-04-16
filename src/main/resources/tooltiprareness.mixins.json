@@ -1,0 +1,22 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.tooltiprareness.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [],
+  "client": [
+    "ItemMixin",
+    "ShieldItemMixin",
+    "CrossbowItemMixin",
+    "MusicDiscItemMixin",
+    "BannerItemMixin",
+    "PotionItemMixin",
+    "FishBucketItemMixin",
+    "BannerPatternItemMixin",
+    "TippedArrowItemMixin",
+    "LingeringPotionItemMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

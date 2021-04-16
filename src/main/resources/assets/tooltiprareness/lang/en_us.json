@@ -1,0 +1,8 @@
+{
+    "item.tooltiprareness.common_item.tooltip": "§7Common",
+    "item.tooltiprareness.uncommon_item.tooltip": "§2Uncommon",
+    "item.tooltiprareness.rare_item.tooltip": "§cRare",
+    "item.tooltiprareness.epic_item.tooltip": "§5Epic",
+    "item.tooltiprareness.legendary_item.tooltip": "§6Legendary",
+    "item.tooltiprareness.admin_item.tooltip": "§8Administrator"
+}

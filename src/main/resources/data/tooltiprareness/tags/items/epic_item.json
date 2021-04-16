@@ -1,0 +1,23 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:netherite_sword",
+        "minecraft:netherite_scrap",
+        "minecraft:netherite_ingot",
+        "minecraft:netherite_helmet",
+        "minecraft:netherite_chestplate",
+        "minecraft:netherite_leggings",
+        "minecraft:netherite_boots",
+        "minecraft:netherite_axe",
+        "minecraft:netherite_pickaxe",
+        "minecraft:netherite_hoe",
+        "minecraft:netherite_shovel",
+        "minecraft:netherite_block",
+        "minecraft:beacon",
+        "minecraft:enchanted_golden_apple",
+        "minecraft:conduit",
+        "minecraft:nether_star",
+        "minecraft:heart_of_the_sea",
+        "minecraft:lodestone"
+    ]
+}
