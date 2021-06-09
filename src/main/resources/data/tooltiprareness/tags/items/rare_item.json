@@ -44,6 +44,8 @@
         "minecraft:experience_bottle",
         "minecraft:totem_of_undying",
         "minecraft:enchanting_table",
-        "minecraft:jukebox"
+        "minecraft:jukebox",
+        "minecraft:deepslate_diamond_ore",
+        "minecraft:deepslate_emerald_ore"
     ]
 }

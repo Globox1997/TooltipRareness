@@ -2,6 +2,8 @@ package net.tooltiprareness.mixin;
 
 import java.util.List;
 
+import net.minecraft.entity.passive.FishEntity;
+import net.minecraft.recipe.FireworkStarRecipe;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -35,17 +37,17 @@ public class ItemMixin {
     @Inject(method = "appendTooltip", at = @At("HEAD"))
     private void appendTooltipMixin(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context,
             CallbackInfo info) {
-        if (stack.getItem().isIn(COMMON_ITEM)) {
+        if (stack.isIn(COMMON_ITEM)) {
             tooltip.add(new TranslatableText("item.tooltiprareness.common_item.tooltip"));
-        } else if (stack.getItem().isIn(UNCOMMON_ITEM)) {
+        } else if (stack.isIn(UNCOMMON_ITEM)) {
             tooltip.add(new TranslatableText("item.tooltiprareness.uncommon_item.tooltip"));
-        } else if (stack.getItem().isIn(RARE_ITEM)) {
+        } else if (stack.isIn(RARE_ITEM)) {
             tooltip.add(new TranslatableText("item.tooltiprareness.rare_item.tooltip"));
-        } else if (stack.getItem().isIn(EPIC_ITEM)) {
+        } else if (stack.isIn(EPIC_ITEM)) {
             tooltip.add(new TranslatableText("item.tooltiprareness.epic_item.tooltip"));
-        } else if (stack.getItem().isIn(LEGENDARY_ITEM)) {
+        } else if (stack.isIn(LEGENDARY_ITEM)) {
             tooltip.add(new TranslatableText("item.tooltiprareness.legendary_item.tooltip"));
-        } else if (stack.getItem().isIn(ADMIN_ITEM)) {
+        } else if (stack.isIn(ADMIN_ITEM)) {
             tooltip.add(new TranslatableText("item.tooltiprareness.admin_item.tooltip"));
         } else {
             tooltip.add(new TranslatableText("item.tooltiprareness.common_item.tooltip"));

@@ -11,10 +11,12 @@
     "MusicDiscItemMixin",
     "BannerItemMixin",
     "PotionItemMixin",
-    "FishBucketItemMixin",
     "BannerPatternItemMixin",
     "TippedArrowItemMixin",
-    "LingeringPotionItemMixin"
+    "LingeringPotionItemMixin",
+    "FireworkItemMixin",
+    "FireworkChargeItemMixin",
+    "EntityBucketItemMixin"
   ],
   "injectors": {
     "defaultRequire": 1
