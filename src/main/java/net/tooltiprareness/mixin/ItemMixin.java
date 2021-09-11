@@ -2,8 +2,7 @@ package net.tooltiprareness.mixin;
 
 import java.util.List;
 
-import net.minecraft.entity.passive.FishEntity;
-import net.minecraft.recipe.FireworkStarRecipe;
+import net.fabricmc.fabric.api.tag.TagFactory;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -20,19 +19,17 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
-import net.fabricmc.fabric.api.tag.TagRegistry;
 
 @Environment(EnvType.CLIENT)
 @Mixin(Item.class)
 public class ItemMixin {
 
-    private static final Tag<Item> COMMON_ITEM = TagRegistry.item(new Identifier("tooltiprareness", "common_item"));
-    private static final Tag<Item> UNCOMMON_ITEM = TagRegistry.item(new Identifier("tooltiprareness", "uncommon_item"));
-    private static final Tag<Item> RARE_ITEM = TagRegistry.item(new Identifier("tooltiprareness", "rare_item"));
-    private static final Tag<Item> EPIC_ITEM = TagRegistry.item(new Identifier("tooltiprareness", "epic_item"));
-    private static final Tag<Item> LEGENDARY_ITEM = TagRegistry
-            .item(new Identifier("tooltiprareness", "legendary_item"));
-    private static final Tag<Item> ADMIN_ITEM = TagRegistry.item(new Identifier("tooltiprareness", "admin_item"));
+    private static final Tag<Item> COMMON_ITEM = TagFactory.ITEM.create(new Identifier("tooltiprareness", "common_item"));
+    private static final Tag<Item> UNCOMMON_ITEM = TagFactory.ITEM.create(new Identifier("tooltiprareness", "uncommon_item"));
+    private static final Tag<Item> RARE_ITEM = TagFactory.ITEM.create(new Identifier("tooltiprareness", "rare_item"));
+    private static final Tag<Item> EPIC_ITEM = TagFactory.ITEM.create(new Identifier("tooltiprareness", "epic_item"));
+    private static final Tag<Item> LEGENDARY_ITEM = TagFactory.ITEM.create(new Identifier("tooltiprareness", "legendary_item"));
+    private static final Tag<Item> ADMIN_ITEM = TagFactory.ITEM.create(new Identifier("tooltiprareness", "admin_item"));
 
     @Inject(method = "appendTooltip", at = @At("HEAD"))
     private void appendTooltipMixin(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context,

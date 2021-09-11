@@ -1,7 +1,7 @@
 package net.tooltiprareness.mixin;
 
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.item.FireworkChargeItem;
+import net.minecraft.item.FireworkStarItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.List;
 
-@Mixin(FireworkChargeItem.class)
+@Mixin(FireworkStarItem.class)
 public class FireworkChargeItemMixin {
 
     @Inject(method = "appendTooltip", at = @At("HEAD"))

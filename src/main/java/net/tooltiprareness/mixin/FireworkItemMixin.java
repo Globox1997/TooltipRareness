@@ -3,7 +3,7 @@ package net.tooltiprareness.mixin;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.item.FireworkItem;
+import net.minecraft.item.FireworkRocketItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.List;
 
 @Environment(EnvType.CLIENT)
-@Mixin(FireworkItem.class)
+@Mixin(FireworkRocketItem.class)
 public class FireworkItemMixin {
 
     @Inject(method = "appendTooltip", at = @At("HEAD"))
