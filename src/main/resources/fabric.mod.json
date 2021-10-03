@@ -16,7 +16,12 @@
   "icon": "assets/tooltiprareness/icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": []
+    "client": [
+      "net.tooltiprareness.TooltipRareness"
+    ],
+    "modmenu": [
+      "net.tooltiprareness.config.ModMenuIntegration"
+    ]
   },
   "mixins": [
     "tooltiprareness.mixins.json"
@@ -24,7 +29,8 @@
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
-    "minecraft": "1.17.x"
+    "minecraft": "1.17.x",
+    "cloth-config2": ">=5.0.34"
   },
   "suggests": {
     "another-mod": "*"

@@ -4,5 +4,35 @@
     "item.tooltiprareness.rare_item.tooltip": "§cRare",
     "item.tooltiprareness.epic_item.tooltip": "§5Epic",
     "item.tooltiprareness.legendary_item.tooltip": "§6Legendary",
-    "item.tooltiprareness.admin_item.tooltip": "§8Administrator"
+    "item.tooltiprareness.admin_item.tooltip": "§8Administrator",
+
+    "text.autoconfig.tooltiprareness.title": "TooltipRareness Config",
+    "text.autoconfig.tooltiprareness.category.default": "Default Settings",
+    "text.autoconfig.tooltiprareness.category.advanced_settings": "Advanced Settings",
+    "text.autoconfig.tooltiprareness.option.showRarenessTooltip": "Show Rareness Tooltip",
+    "text.autoconfig.tooltiprareness.option.showFrameColor": "Show Frame Color",
+
+    "text.autoconfig.tooltiprareness.option.common_frame_color": "Common Frame Color",
+    "text.autoconfig.tooltiprareness.option.uncommon_frame_color": "Uncommon Frame Color",
+    "text.autoconfig.tooltiprareness.option.rare_frame_color": "Rare Frame Color",
+    "text.autoconfig.tooltiprareness.option.epic_frame_color": "Epic Frame Color",
+    "text.autoconfig.tooltiprareness.option.legendary_frame_color": "Legendary Frame Color",
+    "text.autoconfig.tooltiprareness.option.administrator_frame_color": "Administrator Frame Color",
+
+    "text.autoconfig.tooltiprareness.option.common_second_frame_color": "Common Second Frame Color",
+    "text.autoconfig.tooltiprareness.option.uncommon_second_frame_color": "Uncommon Second Frame Color",
+    "text.autoconfig.tooltiprareness.option.rare_second_frame_color": "Rare Second Frame Color",
+    "text.autoconfig.tooltiprareness.option.epic_second_frame_color": "Epic Second Frame Color",
+    "text.autoconfig.tooltiprareness.option.legendary_second_frame_color": "Legendary Second Frame Color",
+    "text.autoconfig.tooltiprareness.option.administrator_second_frame_color": "Administrator Second Frame Color",
+
+    "text.autoconfig.tooltiprareness.option.common_string_length": "Common String Length",
+    "text.autoconfig.tooltiprareness.option.uncommon_string_length": "Uncommon String Length",
+    "text.autoconfig.tooltiprareness.option.rare_string_length": "Rare String Length",
+    "text.autoconfig.tooltiprareness.option.epic_string_length": "Epic String Length",
+    "text.autoconfig.tooltiprareness.option.legendary_string_length": "Legendary String Length",
+    "text.autoconfig.tooltiprareness.option.administrator_string_length": "Administrator String Length",
+
+    "text.autoconfig.tooltiprareness.option.changeBackgroundColor": "Change Background Color",
+    "text.autoconfig.tooltiprareness.option.backgroundColor": "Background Color"
 }

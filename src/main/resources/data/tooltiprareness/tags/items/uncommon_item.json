@@ -70,6 +70,7 @@
         "minecraft:salmon_bucket",
         "minecraft:cod_bucket",
         "minecraft:tropical_fish_bucket",
+        "minecraft:axolotl_bucket",
         "minecraft:lapis_ore",
         "minecraft:lapis_block",
         "minecraft:lapis_lazuli",
@@ -179,6 +180,13 @@
         "minecraft:infested_deepslate",
         "minecraft:deepslate_iron_ore",
         "minecraft:deepslate_lapis_ore",
-        "minecraft:deepslate_gold_ore"
+        "minecraft:deepslate_gold_ore",
+        "minecraft:skull_banner_pattern",
+        "minecraft:flower_banner_pattern",
+        "minecraft:mojang_banner_pattern",
+        "minecraft:globe_banner_pattern",
+        "minecraft:piglin_banner_pattern",
+        "minecraft:creeper_banner_pattern",
+        "minecraft:firework_rocket"
     ]
 }

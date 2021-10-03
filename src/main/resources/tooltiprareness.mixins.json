@@ -5,18 +5,8 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [],
   "client": [
-    "ItemMixin",
-    "ShieldItemMixin",
-    "CrossbowItemMixin",
-    "MusicDiscItemMixin",
-    "BannerItemMixin",
-    "PotionItemMixin",
-    "BannerPatternItemMixin",
-    "TippedArrowItemMixin",
-    "LingeringPotionItemMixin",
-    "FireworkItemMixin",
-    "FireworkChargeItemMixin",
-    "EntityBucketItemMixin"
+    "ItemStackMixin",
+    "ScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1
