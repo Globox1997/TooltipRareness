@@ -186,7 +186,6 @@
         "minecraft:mojang_banner_pattern",
         "minecraft:globe_banner_pattern",
         "minecraft:piglin_banner_pattern",
-        "minecraft:creeper_banner_pattern",
-        "minecraft:firework_rocket"
+        "minecraft:creeper_banner_pattern"
     ]
 }
