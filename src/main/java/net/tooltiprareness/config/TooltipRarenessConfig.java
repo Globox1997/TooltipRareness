@@ -9,10 +9,8 @@ import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment;
 @Config.Gui.Background("minecraft:textures/block/stone.png")
 public class TooltipRarenessConfig implements ConfigData {
 
-    public int test = 0;
-    public int test2 = 0xFF002A00;
-
     public boolean showRarenessTooltip = true;
+    @Comment("Color in 0xHexadecimal - Incompatible with REI")
     public boolean showFrameColor = true;
 
     @ConfigEntry.Category("advanced_settings")
@@ -37,7 +35,7 @@ public class TooltipRarenessConfig implements ConfigData {
     @ConfigEntry.Category("advanced_settings")
     public int epic_second_frame_color = 0xFF2A002A;
     @ConfigEntry.Category("advanced_settings")
-    public int legendary_second_frame_color = 0xFF2A2A00;
+    public int legendary_second_frame_color = 0xFF664200;
     @ConfigEntry.Category("advanced_settings")
     public int administrator_second_frame_color = 0xFF151515;
 
