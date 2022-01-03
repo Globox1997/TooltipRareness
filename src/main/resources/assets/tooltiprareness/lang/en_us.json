@@ -26,13 +26,6 @@
     "text.autoconfig.tooltiprareness.option.legendary_second_frame_color": "Legendary Second Frame Color",
     "text.autoconfig.tooltiprareness.option.administrator_second_frame_color": "Administrator Second Frame Color",
 
-    "text.autoconfig.tooltiprareness.option.common_string_length": "Common String Length",
-    "text.autoconfig.tooltiprareness.option.uncommon_string_length": "Uncommon String Length",
-    "text.autoconfig.tooltiprareness.option.rare_string_length": "Rare String Length",
-    "text.autoconfig.tooltiprareness.option.epic_string_length": "Epic String Length",
-    "text.autoconfig.tooltiprareness.option.legendary_string_length": "Legendary String Length",
-    "text.autoconfig.tooltiprareness.option.administrator_string_length": "Administrator String Length",
-
     "text.autoconfig.tooltiprareness.option.changeBackgroundColor": "Change Background Color",
     "text.autoconfig.tooltiprareness.option.backgroundColor": "Background Color"
 }

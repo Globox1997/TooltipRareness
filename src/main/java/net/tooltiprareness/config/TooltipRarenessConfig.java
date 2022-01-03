@@ -42,19 +42,6 @@ public class TooltipRarenessConfig implements ConfigData {
     public int administrator_second_frame_color = 0xFF151515;
 
     @ConfigEntry.Category("advanced_settings")
-    @Comment("String length is used for frame color")
-    public int common_string_length = 36;
-    @ConfigEntry.Category("advanced_settings")
-    public int uncommon_string_length = 48;
-    @ConfigEntry.Category("advanced_settings")
-    public int rare_string_length = 24;
-    @ConfigEntry.Category("advanced_settings")
-    public int epic_string_length = 20;
-    @ConfigEntry.Category("advanced_settings")
-    public int legendary_string_length = 54;
-    @ConfigEntry.Category("advanced_settings")
-    public int administrator_string_length = 66;
-    @ConfigEntry.Category("advanced_settings")
     public boolean changeBackgroundColor = false;
     @ConfigEntry.Category("advanced_settings")
     public int backgroundColor = -267386864;
