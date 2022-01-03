@@ -5,25 +5,32 @@ import java.util.List;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.ingame.CreativeInventoryScreen;
 import net.minecraft.client.gui.tooltip.TooltipComponent;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.tooltiprareness.TooltipRareness;
 
-@Mixin(Screen.class)
+@Environment(EnvType.CLIENT)
+@Mixin(value = Screen.class, priority = 999)
 public class ScreenMixin {
+
     @Shadow
     protected TextRenderer textRenderer;
     @Shadow
@@ -32,39 +39,57 @@ public class ScreenMixin {
     @Nullable
     protected MinecraftClient client;
 
+    @Nullable
+    @Unique
+    private ItemStack itemStack;
+
+    @Inject(method = "getTooltipFromItem", at = @At("HEAD"))
+    private void getTooltipFromItem(ItemStack stack, CallbackInfoReturnable<List<Text>> info) {
+        if (stack.equals(null))
+            itemStack = null;
+        else
+            itemStack = stack;
+    }
+
+    @Shadow
+    public List<Text> getTooltipFromItem(ItemStack stack) {
+        return null;
+    }
+
     @ModifyConstant(method = "renderTooltipFromComponents", constant = @Constant(intValue = 1347420415), require = 0)
     private int renderTooltipFromComponentsColorOneMixin(int original, MatrixStack matrices, List<TooltipComponent> components, int x, int y) {
-        if (components.size() > 1 && TooltipRareness.CONFIG.showFrameColor && !(client.currentScreen instanceof CreativeInventoryScreen)) {
-            if (components.get(1).getWidth(this.textRenderer) == textRenderer.getWidth(new TranslatableText("item.tooltiprareness.common_item.tooltip").getString()))
+        if (components.size() > 1 && itemStack != null && TooltipRareness.CONFIG.showFrameColor && !(client.currentScreen instanceof CreativeInventoryScreen)) {
+            if (getTooltipFromItem(itemStack).get(1).getString().equals(new TranslatableText("item.tooltiprareness.common_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.common_frame_color;
-            else if (components.get(1).getWidth(this.textRenderer) == textRenderer.getWidth(new TranslatableText("item.tooltiprareness.uncommon_item.tooltip").getString()))
+            else if (getTooltipFromItem(itemStack).get(1).getString().equals(new TranslatableText("item.tooltiprareness.uncommon_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.uncommon_frame_color;
-            else if (components.get(1).getWidth(this.textRenderer) == textRenderer.getWidth(new TranslatableText("item.tooltiprareness.rare_item.tooltip").getString()))
+            else if (getTooltipFromItem(itemStack).get(1).getString().equals(new TranslatableText("item.tooltiprareness.rare_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.rare_frame_color;
-            else if (components.get(1).getWidth(this.textRenderer) == textRenderer.getWidth(new TranslatableText("item.tooltiprareness.epic_item.tooltip").getString()))
+            else if (getTooltipFromItem(itemStack).get(1).getString().equals(new TranslatableText("item.tooltiprareness.epic_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.epic_frame_color;
-            else if (components.get(1).getWidth(this.textRenderer) == textRenderer.getWidth(new TranslatableText("item.tooltiprareness.legendary_item.tooltip").getString()))
+            else if (getTooltipFromItem(itemStack).get(1).getString().equals(new TranslatableText("item.tooltiprareness.legendary_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.legendary_frame_color;
-            else if (components.get(1).getWidth(this.textRenderer) == textRenderer.getWidth(new TranslatableText("item.tooltiprareness.admin_item.tooltip").getString()))
+            else if (getTooltipFromItem(itemStack).get(1).getString().equals(new TranslatableText("item.tooltiprareness.admin_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.administrator_frame_color;
         }
+
         return original;
     }
 
     @ModifyConstant(method = "renderTooltipFromComponents", constant = @Constant(intValue = 1344798847), require = 0)
     private int renderTooltipFromComponentsColorTwoMixin(int original, MatrixStack matrices, List<TooltipComponent> components, int x, int y) {
         if (components.size() > 1 && TooltipRareness.CONFIG.showFrameColor && !(client.currentScreen instanceof CreativeInventoryScreen))
-            if (components.get(1).getWidth(this.textRenderer) == textRenderer.getWidth(new TranslatableText("item.tooltiprareness.common_item.tooltip").getString()))
+            if (getTooltipFromItem(itemStack).get(1).getString().equals(new TranslatableText("item.tooltiprareness.common_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.common_second_frame_color;
-            else if (components.get(1).getWidth(this.textRenderer) == textRenderer.getWidth(new TranslatableText("item.tooltiprareness.uncommon_item.tooltip").getString()))
+            else if (getTooltipFromItem(itemStack).get(1).getString().equals(new TranslatableText("item.tooltiprareness.uncommon_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.uncommon_second_frame_color;
-            else if (components.get(1).getWidth(this.textRenderer) == textRenderer.getWidth(new TranslatableText("item.tooltiprareness.rare_item.tooltip").getString()))
+            else if (getTooltipFromItem(itemStack).get(1).getString().equals(new TranslatableText("item.tooltiprareness.rare_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.rare_second_frame_color;
-            else if (components.get(1).getWidth(this.textRenderer) == textRenderer.getWidth(new TranslatableText("item.tooltiprareness.epic_item.tooltip").getString()))
+            else if (getTooltipFromItem(itemStack).get(1).getString().equals(new TranslatableText("item.tooltiprareness.epic_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.epic_second_frame_color;
-            else if (components.get(1).getWidth(this.textRenderer) == textRenderer.getWidth(new TranslatableText("item.tooltiprareness.legendary_item.tooltip").getString()))
+            else if (getTooltipFromItem(itemStack).get(1).getString().equals(new TranslatableText("item.tooltiprareness.legendary_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.legendary_second_frame_color;
-            else if (components.get(1).getWidth(this.textRenderer) == textRenderer.getWidth(new TranslatableText("item.tooltiprareness.admin_item.tooltip").getString()))
+            else if (getTooltipFromItem(itemStack).get(1).getString().equals(new TranslatableText("item.tooltiprareness.admin_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.administrator_second_frame_color;
         return original;
     }
