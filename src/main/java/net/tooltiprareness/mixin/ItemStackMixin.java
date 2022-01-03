@@ -24,6 +24,7 @@ import net.minecraft.util.Identifier;
 @Environment(EnvType.CLIENT)
 @Mixin(value = ItemStack.class, priority = 999)
 public class ItemStackMixin {
+
     private static final Tag<Item> COMMON_ITEM = TagFactory.ITEM.create(new Identifier("tooltiprareness", "common_item"));
     private static final Tag<Item> UNCOMMON_ITEM = TagFactory.ITEM.create(new Identifier("tooltiprareness", "uncommon_item"));
     private static final Tag<Item> RARE_ITEM = TagFactory.ITEM.create(new Identifier("tooltiprareness", "rare_item"));
