@@ -10,27 +10,27 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.tag.TagFactory;
 import net.fabricmc.api.EnvType;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tag.Tag;
+import net.minecraft.tag.TagKey;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 
 @Environment(EnvType.CLIENT)
 @Mixin(value = ItemStack.class, priority = 999)
 public class ItemStackMixin {
 
-    private static final Tag<Item> COMMON_ITEM = TagFactory.ITEM.create(new Identifier("tooltiprareness", "common_item"));
-    private static final Tag<Item> UNCOMMON_ITEM = TagFactory.ITEM.create(new Identifier("tooltiprareness", "uncommon_item"));
-    private static final Tag<Item> RARE_ITEM = TagFactory.ITEM.create(new Identifier("tooltiprareness", "rare_item"));
-    private static final Tag<Item> EPIC_ITEM = TagFactory.ITEM.create(new Identifier("tooltiprareness", "epic_item"));
-    private static final Tag<Item> LEGENDARY_ITEM = TagFactory.ITEM.create(new Identifier("tooltiprareness", "legendary_item"));
-    private static final Tag<Item> ADMIN_ITEM = TagFactory.ITEM.create(new Identifier("tooltiprareness", "admin_item"));
+    private static final TagKey<Item> COMMON_ITEM = TagKey.of(Registry.ITEM_KEY, new Identifier("tooltiprareness", "common_item"));
+    private static final TagKey<Item> UNCOMMON_ITEM = TagKey.of(Registry.ITEM_KEY, new Identifier("tooltiprareness", "uncommon_item"));
+    private static final TagKey<Item> RARE_ITEM = TagKey.of(Registry.ITEM_KEY, new Identifier("tooltiprareness", "rare_item"));
+    private static final TagKey<Item> EPIC_ITEM = TagKey.of(Registry.ITEM_KEY, new Identifier("tooltiprareness", "epic_item"));
+    private static final TagKey<Item> LEGENDARY_ITEM = TagKey.of(Registry.ITEM_KEY, new Identifier("tooltiprareness", "legendary_item"));
+    private static final TagKey<Item> ADMIN_ITEM = TagKey.of(Registry.ITEM_KEY, new Identifier("tooltiprareness", "admin_item"));
 
     @Inject(method = "getTooltip", at = @At(value = "TAIL"), locals = LocalCapture.CAPTURE_FAILSOFT)
     private void getTooltipMixin(@Nullable PlayerEntity player, TooltipContext context, CallbackInfoReturnable<List<Text>> info, List<Text> list) {
