@@ -20,6 +20,7 @@
     "text.autoconfig.tooltiprareness.option.epic_frame_color": "Epic Frame Color",
     "text.autoconfig.tooltiprareness.option.legendary_frame_color": "Legendary Frame Color",
     "text.autoconfig.tooltiprareness.option.administrator_frame_color": "Administrator Frame Color",
+    "text.autoconfig.tooltiprareness.option.mythic_frame_color": "Mythic Frame Color",
 
     "text.autoconfig.tooltiprareness.option.common_second_frame_color": "Common Second Frame Color",
     "text.autoconfig.tooltiprareness.option.uncommon_second_frame_color": "Uncommon Second Frame Color",
@@ -27,6 +28,7 @@
     "text.autoconfig.tooltiprareness.option.epic_second_frame_color": "Epic Second Frame Color",
     "text.autoconfig.tooltiprareness.option.legendary_second_frame_color": "Legendary Second Frame Color",
     "text.autoconfig.tooltiprareness.option.administrator_second_frame_color": "Administrator Second Frame Color",
+    "text.autoconfig.tooltiprareness.option.mythic_second_frame_color": "Mythic Second Frame Color",
 
     "text.autoconfig.tooltiprareness.option.changeBackgroundColor": "Change Background Color",
     "text.autoconfig.tooltiprareness.option.backgroundColor": "Background Color"
