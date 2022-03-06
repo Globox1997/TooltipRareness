@@ -4,7 +4,9 @@
     "item.tooltiprareness.rare_item.tooltip": "§cRare",
     "item.tooltiprareness.epic_item.tooltip": "§5Epic",
     "item.tooltiprareness.legendary_item.tooltip": "§6Legendary",
+    "item.tooltiprareness.mythic_item.tooltip": "§bMythic",
     "item.tooltiprareness.admin_item.tooltip": "§8Administrator",
+    "item.tooltiprareness.none_item.tooltip": "",
 
     "text.autoconfig.tooltiprareness.title": "TooltipRareness Config",
     "text.autoconfig.tooltiprareness.category.default": "Default Settings",
