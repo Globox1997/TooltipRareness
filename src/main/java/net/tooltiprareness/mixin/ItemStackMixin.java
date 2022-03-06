@@ -31,6 +31,8 @@ public class ItemStackMixin {
     private static final TagKey<Item> EPIC_ITEM = TagKey.of(Registry.ITEM_KEY, new Identifier("tooltiprareness", "epic_item"));
     private static final TagKey<Item> LEGENDARY_ITEM = TagKey.of(Registry.ITEM_KEY, new Identifier("tooltiprareness", "legendary_item"));
     private static final TagKey<Item> ADMIN_ITEM = TagKey.of(Registry.ITEM_KEY, new Identifier("tooltiprareness", "admin_item"));
+    private static final TagKey<Item> MYTHIC_ITEM = TagKey.of(Registry.ITEM_KEY, new Identifier("tooltiprareness", "mythic_item"));
+    private static final TagKey<Item> NONE_ITEM = TagKey.of(Registry.ITEM_KEY, new Identifier("tooltiprareness", "none_item"));
 
     @Inject(method = "getTooltip", at = @At(value = "TAIL"), locals = LocalCapture.CAPTURE_FAILSOFT)
     private void getTooltipMixin(@Nullable PlayerEntity player, TooltipContext context, CallbackInfoReturnable<List<Text>> info, List<Text> list) {
@@ -48,6 +50,10 @@ public class ItemStackMixin {
                 list.add(1, new TranslatableText("item.tooltiprareness.legendary_item.tooltip"));
             } else if (stack.isIn(ADMIN_ITEM)) {
                 list.add(1, new TranslatableText("item.tooltiprareness.admin_item.tooltip"));
+            } else if (stack.isIn(MYTHIC_ITEM)) {
+                list.add(1, new TranslatableText("item.tooltiprareness.mythic_item.tooltip"));
+            } else if (stack.isIn(NONE_ITEM)) {
+                list.add(0, new TranslatableText("item.tooltiprareness.none_item.tooltip"));
             } else {
                 list.add(1, new TranslatableText("item.tooltiprareness.common_item.tooltip"));
             }
