@@ -1,0 +1,38 @@
+{
+    "item.tooltiprareness.common_item.tooltip": "§7普通",
+    "item.tooltiprareness.uncommon_item.tooltip": "§2优秀",
+    "item.tooltiprareness.rare_item.tooltip": "§c精良",
+    "item.tooltiprareness.epic_item.tooltip": "§5史诗",
+    "item.tooltiprareness.legendary_item.tooltip": "§6传说",
+    "item.tooltiprareness.admin_item.tooltip": "§8管理员",
+
+    "text.autoconfig.tooltiprareness.title": "品质/稀有度提示框配置",
+    "text.autoconfig.tooltiprareness.category.default": "默认设置",
+    "text.autoconfig.tooltiprareness.category.advanced_settings": "高级设置",
+    "text.autoconfig.tooltiprareness.option.showRarenessTooltip": "显示精良度提示",
+    "text.autoconfig.tooltiprareness.option.showFrameColor": "显示边框颜色",
+
+    "text.autoconfig.tooltiprareness.option.common_frame_color": "普通-边框颜色",
+    "text.autoconfig.tooltiprareness.option.uncommon_frame_color": "优秀-边框颜色",
+    "text.autoconfig.tooltiprareness.option.rare_frame_color": "精良-边框颜色",
+    "text.autoconfig.tooltiprareness.option.epic_frame_color": "史诗-边框颜色",
+    "text.autoconfig.tooltiprareness.option.legendary_frame_color": "传说-边框颜色",
+    "text.autoconfig.tooltiprareness.option.administrator_frame_color": "管理员-边框颜色",
+
+    "text.autoconfig.tooltiprareness.option.common_second_frame_color": "普通-第二边框颜色",
+    "text.autoconfig.tooltiprareness.option.uncommon_second_frame_color": "优秀-第二边框颜色",
+    "text.autoconfig.tooltiprareness.option.rare_second_frame_color": "精良-第二边框颜色",
+    "text.autoconfig.tooltiprareness.option.epic_second_frame_color": "史诗-第二边框颜色",
+    "text.autoconfig.tooltiprareness.option.legendary_second_frame_color": "传说-第二边框颜色",
+    "text.autoconfig.tooltiprareness.option.administrator_second_frame_color": "管理员-第二边框颜色",
+
+    "text.autoconfig.tooltiprareness.option.common_string_length": "普通-字符串长度",
+    "text.autoconfig.tooltiprareness.option.uncommon_string_length": "优秀-字符串长度",
+    "text.autoconfig.tooltiprareness.option.rare_string_length": "精良-字符串长度",
+    "text.autoconfig.tooltiprareness.option.epic_string_length": "史诗-字符串长度",
+    "text.autoconfig.tooltiprareness.option.legendary_string_length": "传说-字符串长度",
+    "text.autoconfig.tooltiprareness.option.administrator_string_length": "管理员-字符串长度",
+
+    "text.autoconfig.tooltiprareness.option.changeBackgroundColor": "变更背景颜色",
+    "text.autoconfig.tooltiprareness.option.backgroundColor": "背景颜色"
+}
