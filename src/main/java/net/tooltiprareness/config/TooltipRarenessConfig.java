@@ -25,6 +25,8 @@ public class TooltipRarenessConfig implements ConfigData {
     public int legendary_frame_color = 0xFFFFAA00;
     @ConfigEntry.Category("advanced_settings")
     public int administrator_frame_color = 0xFF555555;
+    @ConfigEntry.Category("advanced_settings")
+    public int mythic_frame_color = 0xFF56EDF5;
 
     @ConfigEntry.Category("advanced_settings")
     public int common_second_frame_color = 0xFF2A2A2A;
@@ -38,6 +40,8 @@ public class TooltipRarenessConfig implements ConfigData {
     public int legendary_second_frame_color = 0xFF664200;
     @ConfigEntry.Category("advanced_settings")
     public int administrator_second_frame_color = 0xFF151515;
+    @ConfigEntry.Category("advanced_settings")
+    public int mythic_frame_color = 0xFF2ABCC7;
 
     @ConfigEntry.Category("advanced_settings")
     public boolean changeBackgroundColor = false;

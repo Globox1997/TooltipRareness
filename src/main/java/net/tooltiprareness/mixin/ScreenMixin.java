@@ -71,6 +71,8 @@ public class ScreenMixin {
                 return TooltipRareness.CONFIG.legendary_frame_color;
             else if (getTooltipFromItem(itemStack).get(1).getString().equals(new TranslatableText("item.tooltiprareness.admin_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.administrator_frame_color;
+            else if (getTooltipFromItem(itemStack).get(1).getString().equals(new TranslatableText("item.tooltiprareness.mythic_item.tooltip").getString()))
+                return TooltipRareness.CONFIG.mythic_frame_color;
         }
 
         return original;
@@ -91,6 +93,8 @@ public class ScreenMixin {
                 return TooltipRareness.CONFIG.legendary_second_frame_color;
             else if (getTooltipFromItem(itemStack).get(1).getString().equals(new TranslatableText("item.tooltiprareness.admin_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.administrator_second_frame_color;
+            else if (getTooltipFromItem(itemStack).get(1).getString().equals(new TranslatableText("item.tooltiprareness.mythic_item.tooltip").getString()))
+                return TooltipRareness.CONFIG.mythic_second_frame_color;
         return original;
     }
 
