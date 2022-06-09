@@ -41,7 +41,7 @@ public class TooltipRarenessConfig implements ConfigData {
     @ConfigEntry.Category("advanced_settings")
     public int administrator_second_frame_color = 0xFF151515;
     @ConfigEntry.Category("advanced_settings")
-    public int mythic_frame_color = 0xFF2ABCC7;
+    public int mythic_second_frame_color = 0xFF2ABCC7;
 
     @ConfigEntry.Category("advanced_settings")
     public boolean changeBackgroundColor = false;
