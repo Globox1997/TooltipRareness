@@ -53,7 +53,7 @@ public class ItemStackMixin {
             } else if (stack.isIn(MYTHIC_ITEM)) {
                 list.add(1, new TranslatableText("item.tooltiprareness.mythic_item.tooltip"));
             } else if (stack.isIn(NONE_ITEM)) {
-                list.add(0, new TranslatableText("item.tooltiprareness.none_item.tooltip"));
+                list.add(1, new TranslatableText("item.tooltiprareness.none_item.tooltip"));
             } else {
                 list.add(1, new TranslatableText("item.tooltiprareness.common_item.tooltip"));
             }
