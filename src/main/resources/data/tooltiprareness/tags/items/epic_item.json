@@ -19,6 +19,11 @@
         "minecraft:nether_star",
         "minecraft:heart_of_the_sea",
         "minecraft:lodestone",
-        "minecraft:ancient_debris"
+        "minecraft:ancient_debris",
+        "minecraft:echo_shard",
+        "minecraft:recovery_compass",
+        "minecraft:disc_fragment_5",
+        "minecraft:music_disc_5",
+        "minecraft:reinforced_deepslate"
     ]
 }

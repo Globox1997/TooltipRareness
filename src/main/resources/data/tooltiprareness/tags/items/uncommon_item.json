@@ -71,6 +71,7 @@
         "minecraft:cod_bucket",
         "minecraft:tropical_fish_bucket",
         "minecraft:axolotl_bucket",
+        "minecraft:tadpole_bucket",
         "minecraft:lapis_ore",
         "minecraft:lapis_block",
         "minecraft:lapis_lazuli",
@@ -186,6 +187,10 @@
         "minecraft:mojang_banner_pattern",
         "minecraft:globe_banner_pattern",
         "minecraft:piglin_banner_pattern",
-        "minecraft:creeper_banner_pattern"
+        "minecraft:creeper_banner_pattern",
+        "minecraft:goat_horn",
+        "minecraft:ochre_froglight",
+        "minecraft:verdant_froglight",
+        "minecraft:pearlescent_froglight"
     ]
 }
