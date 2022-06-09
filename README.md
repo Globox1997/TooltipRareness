@@ -10,7 +10,7 @@ TooltipRareness is licensed under MIT.
 ### Datapacks
 Modded items can get added to a rareness group via datapacks.\
 Check out for how to create a datapack here: [Datapack Tutorial](https://minecraft.fandom.com/wiki/Tutorials/Creating_a_data_pack).  
-TooltipRareness adds 6 different rareness groups to minecraft:\
+TooltipRareness adds 6 different rareness groups to minecraft:
 * admin_item
 * legendary_item
 * epic_item
