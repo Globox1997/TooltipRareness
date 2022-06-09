@@ -17,7 +17,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tag.TagKey;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -39,23 +38,23 @@ public class ItemStackMixin {
         if (player != null) {
             ItemStack stack = (ItemStack) (Object) this;
             if (stack.isIn(COMMON_ITEM)) {
-                list.add(1, new TranslatableText("item.tooltiprareness.common_item.tooltip"));
+                list.add(1, Text.translatable("item.tooltiprareness.common_item.tooltip"));
             } else if (stack.isIn(UNCOMMON_ITEM)) {
-                list.add(1, new TranslatableText("item.tooltiprareness.uncommon_item.tooltip"));
+                list.add(1, Text.translatable("item.tooltiprareness.uncommon_item.tooltip"));
             } else if (stack.isIn(RARE_ITEM)) {
-                list.add(1, new TranslatableText("item.tooltiprareness.rare_item.tooltip"));
+                list.add(1, Text.translatable("item.tooltiprareness.rare_item.tooltip"));
             } else if (stack.isIn(EPIC_ITEM)) {
-                list.add(1, new TranslatableText("item.tooltiprareness.epic_item.tooltip"));
+                list.add(1, Text.translatable("item.tooltiprareness.epic_item.tooltip"));
             } else if (stack.isIn(LEGENDARY_ITEM)) {
-                list.add(1, new TranslatableText("item.tooltiprareness.legendary_item.tooltip"));
+                list.add(1, Text.translatable("item.tooltiprareness.legendary_item.tooltip"));
             } else if (stack.isIn(ADMIN_ITEM)) {
-                list.add(1, new TranslatableText("item.tooltiprareness.admin_item.tooltip"));
+                list.add(1, Text.translatable("item.tooltiprareness.admin_item.tooltip"));
             } else if (stack.isIn(MYTHIC_ITEM)) {
-                list.add(1, new TranslatableText("item.tooltiprareness.mythic_item.tooltip"));
+                list.add(1, Text.translatable("item.tooltiprareness.mythic_item.tooltip"));
             } else if (stack.isIn(NONE_ITEM)) {
-                list.add(1, new TranslatableText("item.tooltiprareness.none_item.tooltip"));
+                list.add(1, Text.translatable("item.tooltiprareness.none_item.tooltip"));
             } else {
-                list.add(1, new TranslatableText("item.tooltiprareness.common_item.tooltip"));
+                list.add(1, Text.translatable("item.tooltiprareness.common_item.tooltip"));
             }
         }
     }
