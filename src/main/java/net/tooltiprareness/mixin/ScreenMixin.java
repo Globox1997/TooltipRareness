@@ -40,14 +40,14 @@ public class ScreenMixin {
 
     @Nullable
     @Unique
-    private ItemStack itemStack;
+    private ItemStack tooltipItemStack;
 
     @Inject(method = "getTooltipFromItem", at = @At("HEAD"))
     private void getTooltipFromItem(ItemStack stack, CallbackInfoReturnable<List<Text>> info) {
         if (stack.equals(null))
-            itemStack = null;
+            this.tooltipItemStack = null;
         else
-            itemStack = stack;
+            this.tooltipItemStack = stack;
     }
 
     @Shadow
@@ -55,50 +55,50 @@ public class ScreenMixin {
         return null;
     }
 
-    @ModifyConstant(method = "renderTooltipFromComponents", constant = @Constant(intValue = 1347420415))
+    @ModifyConstant(method = "renderTooltipFromComponents", constant = @Constant(intValue = 0x505000FF), require = 0)
     private int renderTooltipFromComponentsColorOneMixin(int original, MatrixStack matrices, List<TooltipComponent> components, int x, int y) {
-        if (components.size() > 1 && itemStack != null && TooltipRareness.CONFIG.showFrameColor && !(client.currentScreen instanceof CreativeInventoryScreen)) {
-            if (getTooltipFromItem(itemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.common_item.tooltip").getString()))
+        if (components.size() > 1 && this.tooltipItemStack != null && TooltipRareness.CONFIG.showFrameColor && !(client.currentScreen instanceof CreativeInventoryScreen)) {
+            if (getTooltipFromItem(this.tooltipItemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.common_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.common_frame_color;
-            else if (getTooltipFromItem(itemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.uncommon_item.tooltip").getString()))
+            else if (getTooltipFromItem(this.tooltipItemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.uncommon_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.uncommon_frame_color;
-            else if (getTooltipFromItem(itemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.rare_item.tooltip").getString()))
+            else if (getTooltipFromItem(this.tooltipItemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.rare_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.rare_frame_color;
-            else if (getTooltipFromItem(itemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.epic_item.tooltip").getString()))
+            else if (getTooltipFromItem(this.tooltipItemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.epic_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.epic_frame_color;
-            else if (getTooltipFromItem(itemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.legendary_item.tooltip").getString()))
+            else if (getTooltipFromItem(this.tooltipItemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.legendary_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.legendary_frame_color;
-            else if (getTooltipFromItem(itemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.admin_item.tooltip").getString()))
+            else if (getTooltipFromItem(this.tooltipItemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.admin_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.administrator_frame_color;
-            else if (getTooltipFromItem(itemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.mythic_item.tooltip").getString()))
+            else if (getTooltipFromItem(this.tooltipItemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.mythic_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.mythic_frame_color;
         }
 
         return original;
     }
 
-    @ModifyConstant(method = "renderTooltipFromComponents", constant = @Constant(intValue = 1344798847))
+    @ModifyConstant(method = "renderTooltipFromComponents", constant = @Constant(intValue = 1344798847), require = 0)
     private int renderTooltipFromComponentsColorTwoMixin(int original, MatrixStack matrices, List<TooltipComponent> components, int x, int y) {
         if (components.size() > 1 && TooltipRareness.CONFIG.showFrameColor && !(client.currentScreen instanceof CreativeInventoryScreen))
-            if (getTooltipFromItem(itemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.common_item.tooltip").getString()))
+            if (getTooltipFromItem(this.tooltipItemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.common_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.common_second_frame_color;
-            else if (getTooltipFromItem(itemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.uncommon_item.tooltip").getString()))
+            else if (getTooltipFromItem(this.tooltipItemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.uncommon_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.uncommon_second_frame_color;
-            else if (getTooltipFromItem(itemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.rare_item.tooltip").getString()))
+            else if (getTooltipFromItem(this.tooltipItemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.rare_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.rare_second_frame_color;
-            else if (getTooltipFromItem(itemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.epic_item.tooltip").getString()))
+            else if (getTooltipFromItem(this.tooltipItemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.epic_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.epic_second_frame_color;
-            else if (getTooltipFromItem(itemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.legendary_item.tooltip").getString()))
+            else if (getTooltipFromItem(this.tooltipItemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.legendary_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.legendary_second_frame_color;
-            else if (getTooltipFromItem(itemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.admin_item.tooltip").getString()))
+            else if (getTooltipFromItem(this.tooltipItemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.admin_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.administrator_second_frame_color;
-            else if (getTooltipFromItem(itemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.mythic_item.tooltip").getString()))
+            else if (getTooltipFromItem(this.tooltipItemStack).get(1).getString().equals(Text.translatable("item.tooltiprareness.mythic_item.tooltip").getString()))
                 return TooltipRareness.CONFIG.mythic_second_frame_color;
         return original;
     }
 
     // Background color - issue with architectury mod -> incompat with REI
-    @ModifyConstant(method = "renderTooltipFromComponents", constant = @Constant(intValue = -267386864))
+    @ModifyConstant(method = "renderTooltipFromComponents", constant = @Constant(intValue = -267386864), require = 0)
     private int renderTooltipFromComponentsColorThirdMixin(int original) {
         if (TooltipRareness.CONFIG.changeBackgroundColor)
             return TooltipRareness.CONFIG.backgroundColor;
