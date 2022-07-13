@@ -44,7 +44,7 @@ public class ScreenMixin {
 
     @Inject(method = "getTooltipFromItem", at = @At("HEAD"))
     private void getTooltipFromItem(ItemStack stack, CallbackInfoReturnable<List<Text>> info) {
-        if (stack.equals(null))
+        if (stack == null)
             this.tooltipItemStack = null;
         else
             this.tooltipItemStack = stack;
