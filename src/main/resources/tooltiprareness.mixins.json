@@ -6,7 +6,8 @@
   "mixins": [],
   "client": [
     "ItemStackMixin",
-    "ScreenMixin"
+    "ScreenMixin",
+    "TooltipBackgroundRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

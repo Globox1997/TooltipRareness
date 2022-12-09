@@ -13,46 +13,34 @@ import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tag.TagKey;
 import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.tooltiprareness.TooltipRareness;
 
 @Environment(EnvType.CLIENT)
 @Mixin(value = ItemStack.class, priority = 999)
 public class ItemStackMixin {
-
-    private static final TagKey<Item> COMMON_ITEM = TagKey.of(Registry.ITEM_KEY, new Identifier("tooltiprareness", "common_item"));
-    private static final TagKey<Item> UNCOMMON_ITEM = TagKey.of(Registry.ITEM_KEY, new Identifier("tooltiprareness", "uncommon_item"));
-    private static final TagKey<Item> RARE_ITEM = TagKey.of(Registry.ITEM_KEY, new Identifier("tooltiprareness", "rare_item"));
-    private static final TagKey<Item> EPIC_ITEM = TagKey.of(Registry.ITEM_KEY, new Identifier("tooltiprareness", "epic_item"));
-    private static final TagKey<Item> LEGENDARY_ITEM = TagKey.of(Registry.ITEM_KEY, new Identifier("tooltiprareness", "legendary_item"));
-    private static final TagKey<Item> ADMIN_ITEM = TagKey.of(Registry.ITEM_KEY, new Identifier("tooltiprareness", "admin_item"));
-    private static final TagKey<Item> MYTHIC_ITEM = TagKey.of(Registry.ITEM_KEY, new Identifier("tooltiprareness", "mythic_item"));
-    private static final TagKey<Item> NONE_ITEM = TagKey.of(Registry.ITEM_KEY, new Identifier("tooltiprareness", "none_item"));
 
     @Inject(method = "getTooltip", at = @At(value = "TAIL"), locals = LocalCapture.CAPTURE_FAILSOFT)
     private void getTooltipMixin(@Nullable PlayerEntity player, TooltipContext context, CallbackInfoReturnable<List<Text>> info, List<Text> list) {
         if (player != null) {
             ItemStack stack = (ItemStack) (Object) this;
             if (stack != null)
-                if (stack.isIn(COMMON_ITEM)) {
+                if (stack.isIn(TooltipRareness.COMMON_ITEM)) {
                     list.add(1, Text.translatable("item.tooltiprareness.common_item.tooltip"));
-                } else if (stack.isIn(UNCOMMON_ITEM)) {
+                } else if (stack.isIn(TooltipRareness.UNCOMMON_ITEM)) {
                     list.add(1, Text.translatable("item.tooltiprareness.uncommon_item.tooltip"));
-                } else if (stack.isIn(RARE_ITEM)) {
+                } else if (stack.isIn(TooltipRareness.RARE_ITEM)) {
                     list.add(1, Text.translatable("item.tooltiprareness.rare_item.tooltip"));
-                } else if (stack.isIn(EPIC_ITEM)) {
+                } else if (stack.isIn(TooltipRareness.EPIC_ITEM)) {
                     list.add(1, Text.translatable("item.tooltiprareness.epic_item.tooltip"));
-                } else if (stack.isIn(LEGENDARY_ITEM)) {
+                } else if (stack.isIn(TooltipRareness.LEGENDARY_ITEM)) {
                     list.add(1, Text.translatable("item.tooltiprareness.legendary_item.tooltip"));
-                } else if (stack.isIn(ADMIN_ITEM)) {
+                } else if (stack.isIn(TooltipRareness.ADMIN_ITEM)) {
                     list.add(1, Text.translatable("item.tooltiprareness.admin_item.tooltip"));
-                } else if (stack.isIn(MYTHIC_ITEM)) {
+                } else if (stack.isIn(TooltipRareness.MYTHIC_ITEM)) {
                     list.add(1, Text.translatable("item.tooltiprareness.mythic_item.tooltip"));
-                } else if (stack.isIn(NONE_ITEM)) {
+                } else if (stack.isIn(TooltipRareness.NONE_ITEM)) {
                     list.add(1, Text.translatable("item.tooltiprareness.none_item.tooltip"));
                 } else {
                     list.add(1, Text.translatable("item.tooltiprareness.common_item.tooltip"));
