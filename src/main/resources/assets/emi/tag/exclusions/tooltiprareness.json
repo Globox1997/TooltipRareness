@@ -1,0 +1,12 @@
+{
+    "exclusions": [
+        "tooltiprareness:common_item",
+        "tooltiprareness:uncommon_item",
+        "tooltiprareness:rare_item",
+        "tooltiprareness:epic_item",
+        "tooltiprareness:legendary_item",
+        "tooltiprareness:admin_item",
+        "tooltiprareness:mythic_item",
+        "tooltiprareness:none_item"
+    ]
+}
