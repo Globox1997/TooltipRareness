@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
+        "minecraft:spawner",
         "minecraft:command_block",
         "minecraft:repeating_command_block",
         "minecraft:chain_command_block",
@@ -79,6 +80,11 @@
         "minecraft:goat_spawn_egg",
         "minecraft:piglin_brute_spawn_egg",
         "minecraft:tadpole_spawn_egg",
-        "minecraft:warden_spawn_egg"
+        "minecraft:warden_spawn_egg",
+        "minecraft:warden_spawn_egg",
+        "minecraft:snow_golem_spawn_egg",
+        "minecraft:iron_golem_spawn_egg",
+        "minecraft:sniffer_spawn_egg",
+        "minecraft:camel_spawn_egg"
     ]
 }

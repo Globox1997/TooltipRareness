@@ -1,6 +1,6 @@
 ### Added:
-- Added emi exclusion
+- 
 ### Fixed:
 - 
 ### Changed:
-- 
+- Updated to mc 1.20

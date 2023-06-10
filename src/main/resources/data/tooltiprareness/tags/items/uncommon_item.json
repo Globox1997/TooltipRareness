@@ -178,6 +178,7 @@
         "minecraft:raw_copper_block",
         "minecraft:raw_gold_block",
         "minecraft:sculk_sensor",
+        "minecraft:calibrated_sculk_sensor",
         "minecraft:infested_deepslate",
         "minecraft:deepslate_iron_ore",
         "minecraft:deepslate_lapis_ore",
@@ -191,6 +192,7 @@
         "minecraft:goat_horn",
         "minecraft:ochre_froglight",
         "minecraft:verdant_froglight",
-        "minecraft:pearlescent_froglight"
+        "minecraft:pearlescent_froglight",
+        "minecraft:brush"
     ]
 }

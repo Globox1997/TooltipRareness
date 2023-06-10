@@ -44,6 +44,12 @@ public class TooltipRarenessConfig implements ConfigData {
     // public int mythic_second_frame_color = 0xFF2ABCC7;
 
     @ConfigEntry.Category("advanced_settings")
+    public boolean changeBorderColor = false;
+    @ConfigEntry.Category("advanced_settings")
+    public int borderColorStart = 0x505000FF;
+    @ConfigEntry.Category("advanced_settings")
+    public int borderColorEnd = 1344798847;
+    @ConfigEntry.Category("advanced_settings")
     public boolean changeBackgroundColor = false;
     @ConfigEntry.Category("advanced_settings")
     public int backgroundColor = -267386864;

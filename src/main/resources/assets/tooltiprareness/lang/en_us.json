@@ -30,6 +30,9 @@
     "text.autoconfig.tooltiprareness.option.administrator_second_frame_color": "Administrator Second Frame Color",
     "text.autoconfig.tooltiprareness.option.mythic_second_frame_color": "Mythic Second Frame Color",
 
+    "text.autoconfig.tooltiprareness.option.changeBorderColor": "Change Border Color",
+    "text.autoconfig.tooltiprareness.option.borderColorStart": "Border Color Start",
+    "text.autoconfig.tooltiprareness.option.borderColorEnd": "Border Color End",
     "text.autoconfig.tooltiprareness.option.changeBackgroundColor": "Change Background Color",
     "text.autoconfig.tooltiprareness.option.backgroundColor": "Background Color"
 }
